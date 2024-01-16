@@ -1,9 +1,5 @@
 # Javascript Interview Cheatsheet
 
-### Table of contents
+> Work In Progress. Constantly.
 
-- [Data types](/src/01_data-types.md)
-- [Objects](/src/02_objects.md)
-- [Functions](/src/03_functions.md)
-- [Loops](/src/04_loops.md)
-- [Misc](/src/99_misc.md)
+This is my JS cheatsheet that I use when preparing to a tech interview in order to recall some basic things, tricky places, and that rarely used stuff you've forgotten about, but no doubts you'll be asked about them on TI, be sure.

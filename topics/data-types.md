@@ -1,4 +1,6 @@
-## Data Types {#id-1}
+# Data Types
+
+## Basic types
 
 JS is a dynamically/weakly typed language. It has __8 basic data types__: *string, number, bigint, boolean, symbol, undefined, null, object*.
 
@@ -33,3 +35,41 @@ Symbol.keyFor(x) === x.description
 
 for .. in and Object.keys() skip symbols
 Object.assign() copies both string and symbolic props
+
+## Derived types
+
+### Map
+
+__Map__ object holds ordered key-value pairs and can use any type of value as a key.
+
+Props: size
+
+Methods: set, get, has, delete, clear, keys, values, entries, forEach
+
+Map to object: `Object.fromEntries(map)`
+
+Object to Map: `new Map(Object.entries(obj))`
+
+### Set
+
+__Set__ is a collection without keys, where each value may occur only once.
+
+Props: size.
+
+Methods: add, delete, has, clear, keys, values, entries, forEach
+
+### WeakMap, WeakSet
+
+These can be used as an additional storage for objectys that already exist. Objects store there while they are reachable from somewhere else
+
+`WeakMap` methods: set, get, has, delete
+
+`WeakSet` methods: add, has, delete
+
+- They __CAN NOT__ store primitives
+- They are __NOT__ iterable
+- They __DON'T__ have `size` or `keys`
+ 
+Their main advantages are that they have weak reference to objects, so they can easily be removed by garbage collector.
+
+`WeakMap` and `WeakSet` are used as “secondary” data structures in addition to the “primary” object storage. Once the object is removed from the primary storage, if it is only found as the key of WeakMap or in a WeakSet, it will be cleaned up automatically.
