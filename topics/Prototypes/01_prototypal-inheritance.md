@@ -6,8 +6,20 @@ When we read a property from object, and it’s missing, JavaScript automaticall
 
 `__proto__` is a getter/setter for `[[Prototype]]`
 
-The `__proto__` property is outdated. It exists for historical reasons, modern JavaScript suggests that we should use `Object.getPrototypeOf/Object.setPrototypeOf` functions instead that get/set the prototype.
+The `__proto__` property is outdated and exists only for historical reasons. Modern JavaScript suggests that we should use `Object.getPrototypeOf/.setPrototypeOf` functions instead that get/set the prototype.
 
-No matter where the method is found: in an object or its prototype. In a method call, this is always the object before the dot.
+```js
+Object.getPrototypeOf(obj)
+Object.setPrototypeOf(obj, prototype)
+```
 
-The for..in loop iterates over inherited properties too.
+No matter where the method is found: in an object or its prototype. In a method call, `this` is always the object before the dot.
+
+The `for..in` loop iterates over inherited properties too.
+
+--- 
+
+### Resources
+
+- [Object.getPrototypeOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)
+- [Object.setPrototypeOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf)

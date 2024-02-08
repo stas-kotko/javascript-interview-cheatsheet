@@ -1,26 +1,41 @@
 # Promises
 
+The `Promise` object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
 
 A Promise is in one of these states:
 
-- pending: initial state, neither fulfilled nor rejected, `{ state: 'pending', result: undefined }`
-- fulfilled: meaning that the operation was completed successfully, `{ state: 'fulfilled, result: <value> }`
-- rejected: meaning that the operation failed, `{ state: 'rejected, result: <error> }`
+- _pending_: initial state, neither fulfilled nor rejected, `{ state: 'pending', result: undefined }`
+- _fulfilled_: meaning that the operation was completed successfully, `{ state: 'fulfilled, result: <value> }`
+- _rejected_: meaning that the operation failed, `{ state: 'rejected, result: <error> }`
 
 
-The function passed to `new Promise` is called the __executor__. When new Promise is created, the executor runs automatically.
+The function passed to `new Promise` is called the __executor__. When new Promise is created, the executor runs automatically _immediately_.
 
 Its arguments `resolve` and `reject` are callbacks provided by JavaScript itself.
 
-> The properties `state` and `result` of the Promise object are internal. We can’t directly access them. We can use the methods .then/.catch/.finally for that.
+The properties `state` and `result` of the Promise object are internal. We can’t directly access them. We can use the methods .then/.catch/.finally for that.
 
-Handlers (consumers): `.then(result, error)`, `.catch(error)`, `.finally()`
+
+Handlers (consumers):
+- `.then(result, error)`
+- `.catch(error)`
+- `.finally()`
+
 
 The code of a promise executor and its handlers has an "invisible" `try..catch` around it. If an exception happens, it gets caught and treated as a rejection. An error will be turned into a rejected promise.
 
 If we throw an exception inside `.catch` , then the control goes to the next closest error handler. If we handle the error and finish normally, it continues to the next closest `.then`.
 
-“Thenable” object – an arbitrary object that has a method .then. It will be treated the same way as a promise. The idea is that 3rd-party libraries may implement “promise-compatible” objects of their own. They can have an extended set of methods, but also be compatible with native promises, because they implement .then.
+“Thenable” object – an arbitrary object that has a method .then. It will be treated the same way as a promise. The idea is that 3rd-party libraries may implement “promise-compatible” objects of their own. They can have an extended set of methods, but also be compatible with native promises, because they implement `.then` method.
+
+```javascript
+new Promise(resolve => resolve())
+  .then((res) => {
+    return new Thenable(res);
+  })
+  .then();
+```
+
 
 
 ## promise API
@@ -35,6 +50,12 @@ There are __6 static methods__ of `Promise` class:
 1. `Promise.any(promises)` – waits for the first promise to __fulfill__, and its result becomes the outcome. If all of the given promises are rejected, AggregateError becomes the error of Promise.any.
 1. `Promise.resolve(value)` – makes a resolved promise with the given value.
 1. `Promise.reject(error)` – makes a rejected promise with the given error.
+
+
+|           | Fulfilled | Settled         |
+|-----------|-----------|-----------------|
+| __All__   | `.all()`  | `.allSettled()` | 
+| __First__ | `.any()`  | `.race()`       |
 
 
 ## Promisification

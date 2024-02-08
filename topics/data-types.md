@@ -17,8 +17,8 @@ Math operations are always safe – we never get an error. At worst, it will be 
 Forms of numbers: 
 | Name						| Example
 |-----------------|----------
-| Regular  | 1234
-| With separator| 1_000_000
+| Regular         | 1234
+| With separator  | 1_000_000
 | Zeroes counted	| 2.4e8
 | Hexadecimal			| 0xff
 | Binary					| 0b1101011
