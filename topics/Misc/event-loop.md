@@ -6,6 +6,7 @@ Event loop is a process (mechanism) that coordinates asynchronous operation in a
 
 It has one very simple job: it looks at the stack and it looks at the queue. If the stack is empty, it takes the firts task in the queue and push it onto the stack. Now the stack has what to do and event loop wait until the stack is empty again to start from the beginning.
 
+The event loop is what allows *Node.js* to perform non-blocking I/O operations — despite the fact that JavaScript is single-threaded — by offloading operations to the system kernel whenever possible. - [The Node.js Event Loop](https://nodejs.org/en/guides/event-loop-timers-and-nexttick/)
 
 ### General algorithm
 
@@ -25,12 +26,9 @@ It has one very simple job: it looks at the stack and it looks at the queue. If 
 | `mousemove`, `click` event | `queueMicrotask()` |
 
 
-_Microtasks_ come solely from our code!
-
-
 Immediately after every _macrotask_, the engine executes all tasks from _microtask_ queue, prior to running any other macrotasks or rendering or anything else.
 
-Event loop takes tasks from the queue and put them to the call stack. Each task in the queue executes each time the new iteration (tick) of the queue begins.
+Event loop takes tasks from the queue and put them to the call stack. Each task in the queue executes every time the new iteration (tick) of the queue begins.
 
 If we’d like to execute a function asynchronously (after the current code), but _before_ changes are rendered or new events handled, we can schedule it with `queueMicrotask()`
 
@@ -43,6 +41,8 @@ The ECMA standard specifies an internal queue `PromiseJobs`, more often referred
 
 Microtask queue is an engine's internal mechanism for managing asynch operations.
 
+_Microtasks_ come solely from our code!
+
 According tothe ECMA spec, MQ:
 - is FIFO
 - execution of a task is initiated only when nothing else is running
@@ -50,3 +50,10 @@ According tothe ECMA spec, MQ:
 Promise handling is always asynchronous, as all promise actions pass through the internal “promise jobs” queue, also called “microtask queue” (V8 term).
 
 So `.then/catch/finally` handlers are always called after the current code is finished.
+
+
+---
+
+### Resources
+
+- https://nodejs.org/en/guides/event-loop-timers-and-nexttick/

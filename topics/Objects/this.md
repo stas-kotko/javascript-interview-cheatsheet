@@ -1,4 +1,4 @@
-# __this__ keyword
+# `this` keyword
 
 `this` is a keyword that references another value (usually an object) that represents __current execution context.__
 
@@ -6,11 +6,7 @@ The current execution context can be a _global object_ or when used inside a fun
 
 `this` is evaluated during the runtime depending on the context
 
-`this` is the object that is executing the current function - "object before the dot".
-
-`this` is a binding that the language creates for you when the function body is evaluated.
-
-The value of `this` always changes based on how a function is called
+`this` is the object that is executing the current function - "object before the dot". It's a binding that the language creates for you when the function body is evaluated. The value of `this` always changes based on how a function is called. 
 
 The value of `this` depends on in which context it appears: function, class, or global.
 
@@ -53,17 +49,13 @@ const o = { a: 37, f, g, h };
 console.log(o.a, o.f(), o.g(), o.h()); // 37 37 azerty azerty
 ```
 
-### call
+#### `.call()` vs `.apply()`
 
 Built-in function method `func.call(context, …args)` that allows to call a function explicitly setting `this`.
 
-### apply
-
 Instead of `func.call(this, ...arguments)` we could use `func.apply(this, args)`.
 
-It runs the `func` setting `this=context` and using an array-like object `args` as the list of arguments.
-
-The only syntax difference between `call` and `apply` is that `call` expects a list of arguments, while `apply` takes an array-like object with them.
+The only syntax difference between `call` and `apply` is that `call` expects *a list of arguments*, while `apply` takes *an array-like object* with them.
 
 > NB! Rremember the difference:
 > - _**c**_ is for _**c**omma_, used in _**c**all_ 

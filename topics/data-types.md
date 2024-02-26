@@ -26,21 +26,23 @@ Forms of numbers:
 
 
 ### Symbol
-Is a primitive type for unique ID. Can be local created as Symbol(descr), or can be global – Symbol.for(descr)
+Is a primitive type for unique ID. Can be local created as `Symbol(descr)`, or can be global – `Symbol.for(descr)`
 
-Symbol.for(descr) gets the symbol from from the global register or creates it if it doesn’t exist
+`Symbol.for(descr)` gets the symbol from from the global register or creates it if it doesn’t exist
 
-Symbol.keyFor(descr) gets the name of the symbol by the symbol itself. It doesn’t work for non-global symbols. 
-Symbol.keyFor(x) === x.description
+`Symbol.keyFor(descr)` gets the name of the symbol by the symbol itself. It doesn’t work for non-global symbols.
 
-for .. in and Object.keys() skip symbols
-Object.assign() copies both string and symbolic props
+`Symbol.keyFor(x) === x.description`
+
+`for .. in` and `Object.keys()` skip symbols
+
+`Object.assign()` copies both string and symbolic props
 
 ## Derived types
 
 ### Map
 
-__Map__ object holds ordered key-value pairs and can use any type of value as a key.
+Map object holds ordered key-value pairs and can use any type of value as a key.
 
 Props: size
 
@@ -52,7 +54,7 @@ Object to Map: `new Map(Object.entries(obj))`
 
 ### Set
 
-__Set__ is a collection without keys, where each value may occur only once.
+Set is a collection without keys, where each value may occur only once.
 
 Props: size.
 

@@ -12,8 +12,8 @@ That leads to two important issues:
 The `defer` attribute tells the browser not to wait for the script. Instead, the browser will continue to process the HTML, build DOM. The script loads “in the background”, and then runs when the DOM is fully built.
 
 - `defer` never block the page.
-- `defer` always execute when the DOM is ready (but before DOMContentLoaded[^1] event).
-- Deferred scripts keep their relative order, just like regular scripts.
+- `defer` always execute when the DOM is ready (but before `DOMContentLoaded`[^1] event).
+- Always keep their relative order (just like regular scripts).
 - Browsers download deferred scripts in parallel
 
 > Note!
@@ -22,7 +22,7 @@ The `defer` attribute tells the browser not to wait for the script. Instead, the
 
 > Note!
 >
-> DOMContentLoaded event only triggers when the script is _downloaded_ and _executed._
+> `DOMContentLoaded` event only triggers when the script is _downloaded_ and _executed._
 
 ## `async`
 

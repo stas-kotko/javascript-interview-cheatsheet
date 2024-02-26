@@ -6,7 +6,7 @@ Single sequentional flow of control
 
 Synchronous language with async capabilities
 
-A thread has a _call stack_ and a _memory heap_.
+A thread has a _call stack_ (execution context stack) and a _memory heap_.
 
 The call stack:
 - stack of functions to be executed

@@ -1,6 +1,6 @@
 # Classes
 
-`class` syntax creates a function. Code from `constructor` goes to the func body. Methods go to the F.prototype.
+`class` syntax creates a function. Code from `constructor` goes to the func body. Methods go to the `F.prototype`.
 
 __Not just a syntactic shugar:__
 1. functions created with `class` labeled by `[[IsClassConstructor]]: true`  

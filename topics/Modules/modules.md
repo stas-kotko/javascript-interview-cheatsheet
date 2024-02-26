@@ -43,6 +43,6 @@ import(modulePath)
 
 > Note:
 > 
-> Although import() looks like a function call, it’s a special syntax that just happens to use parentheses (similar to super()).
+> Although `import()` looks like a function call, it’s a special syntax that just happens to use parentheses (similar to `require()` in NodeJS or `super()` in classes).
 >
 > So we can’t copy import to a variable or use call/apply with it. It’s not a function.

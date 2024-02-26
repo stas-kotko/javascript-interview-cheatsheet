@@ -2,7 +2,7 @@
 
 ## Brief
 
-> Web Worker is a JavaScript script executed from an HTML page that runs in the background, independently of scripts that may also have been executed from the same HTML page.
+Web Worker is a JavaScript script executed from an HTML page that runs in the background, independently of scripts that may also have been executed from the same HTML page.
 
 Web Workers allow you to do things like fire up long-running scripts to handle computationally intensive tasks, but without blocking the UI or other scripts to handle user interactions.
 
@@ -45,7 +45,7 @@ self.addEventListener('message', event => {
 
 ### Loading external scripts
 
-You can load external script files or libraries into a worker with the importScripts() function.
+You can load external script files or libraries into a worker with the `importScripts()` built-in function.
 
 ```javascript
 importScripts('script1.js');
