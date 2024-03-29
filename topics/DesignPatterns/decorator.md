@@ -6,19 +6,33 @@ aka: Wrapper
 
 Group: Structural patterns
 
-__Identification:__ Decorator can be recognized by creation methods or constructors that accept objects of the same class or interface as a current class.
+__Identification:__ Decorator can be recognized by creation methods or
+constructors that accept objects of the same class or interface as a current class.
 
-Decorator is a pattern that lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors.
+Decorator is a pattern that lets you attach new behaviors to objects by placing
+these objects inside special wrapper objects that contain the behaviors.
 
-An object can use the behavior of various classes, having references to multiple objects and delegating them all kinds of work. Aggregation/composition is the key principle behind many design patterns, including Decorator.
+An object can use the behavior of various classes, having references to multiple
+objects and delegating them all kinds of work. Aggregation/composition is the
+key principle behind many design patterns, including Decorator.
 
-A _wrapper_ is an object that can be linked with some _target_ object. The wrapper contains the same set of methods as the target and delegates to it all requests it receives. However, the wrapper may alter the result by doing something either before or after it passes the request to the target.
+A _wrapper_ is an object that can be linked with some _target_ object. The wrapper
+contains the same set of methods as the target and delegates to it all requests
+it receives. However, the wrapper may alter the result by doing something
+either before or after it passes the request to the target.
 
-When does a simple wrapper become the real decorator? As mentioned before, the wrapper implements the same interface as the wrapped object. That’s why from the client’s perspective these objects are identical. This will let you cover an object in multiple wrappers, adding the combined behavior of all the wrappers to it.
+When does a simple wrapper become the real decorator? As mentioned before, the wrapper
+implements the same interface as the wrapped object. That’s why from the client’s
+perspective these objects are identical. This will let you cover an object in
+multiple wrappers, adding the combined behavior of all the wrappers to it.
 
-The client code would need to wrap a basic object into a set of decorators that match the client’s preferences. The resulting objects will be structured as a stack.
+The client code would need to wrap a basic object into a set of decorators that
+match the client’s preferences. The resulting objects will be structured as a stack.
 
-The last decorator in the stack would be the object that the client actually works with. Since all decorators implement the same interface as the base object, the rest of the client code won’t care whether it works with the “pure” object or the decorated one.
+The last decorator in the stack would be the object that the client actually
+works with. Since all decorators implement the same interface as the base object,
+the rest of the client code won’t care whether it works with the “pure” object
+or the decorated one.
 
 ## Applicability
 

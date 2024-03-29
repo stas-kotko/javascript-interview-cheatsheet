@@ -1,6 +1,7 @@
 
 # Objects
-Objects can be created in two ways: with _literal_ or with _constructor_.
+
+Objects can be created in two ways: with *literal* or with *constructor*.
 
 `Object.assign(dest, …sources)` – copies all enumerable own props and returns a modified target.
 
@@ -14,7 +15,7 @@ What can __NOT__ be cloned with `structuredClone()`:
 - prop descriptors, getters, setters, and similar metadata-like features
 
 
-### Constructors
+## Constructors
 
 When a constructor function is executed with `new` keyword it performs the following steps:
 1. a new empty obj is created and assigned to `this`
@@ -31,7 +32,7 @@ function User(name) {
 }
 ```
 
-### Object iteration
+## Object iteration
 
 Objects are not iterable by default, so we can't use `for .. of` loop on it. To make it so, we can add `[Symbol.iterator]` field to it. It has to be a function that returns an object with `next()` method - an **iterator**. The `next()` method has to return an obj of type `{done: boolean, value: any}`.
 
@@ -47,5 +48,7 @@ Things that don't work with `structuredClone()`:
 
 
 ---
+
 ### Resources
+
 - [Objects: the basics](https://javascript.info/object-basics)

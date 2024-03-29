@@ -1,8 +1,8 @@
 # Property getters and setters
 
 There are two kinds of object properties:
-- _data props_ - regular ones
-- _accesor props_ - getters/setters
+- *data props* - regular ones
+- *accesor props* - getters/setters
 
 They are essentially _functions_ that execute on getting and setting a value, but look like regular properties to an external code.
 

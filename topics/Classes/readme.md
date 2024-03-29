@@ -1,15 +1,19 @@
 # Classes
 
-`class` syntax creates a function. Code from `constructor` goes to the func body. Methods go to the `F.prototype`.
+`class` syntax creates a function. Code from `constructor` goes to the func body.
+Methods go to the `F.prototype`.
 
 __Not just a syntactic shugar:__
+
 1. functions created with `class` labeled by `[[IsClassConstructor]]: true`  
    Hence, we can not use them without `new`
 1. Class methods are not enumerable by default
 1. All code inside the class constructor is _always_ in "use strict"
 
 
-Class fields - props for an individual objects, not for the prototype. Fields declared with "=", not with the ":"
+Class fields - props for an individual objects, not for the prototype.
+Fields declared with "=", not with the ":"
+
 
 ```js
 class User {
@@ -29,7 +33,9 @@ class User {
 
 As a result, inheritance works for both regular and static methods.
 
-Built-in classes have no static inheritance: despite the fact such objects as Date or Array inherits from Object, they don't have its statics (like `Array.keys` or `Date.getOwnProperty`)
+Built-in classes have no static inheritance: despite the fact such objects as
+Date or Array inherits from Object, they don't have its statics
+(like `Array.keys` or `Date.getOwnProperty`)
 
 ---
 
