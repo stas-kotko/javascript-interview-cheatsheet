@@ -13,6 +13,10 @@ Object.getPrototypeOf(obj)
 Object.setPrototypeOf(obj, prototype)
 ```
 
+Also, `__proto__` can be manipulated with `Object.create(proto, [descriptors])`. This method creates an empty object with a given proto and optional property descriptors.
+
+Changing prototype is quite expensive for an engine and it breaks inner optimization for object porperty access operations. Changing it on the fly, no matter in which way, is not recommended.
+
 No matter where the method is found: in an object or its prototype. In a method call, `this` is always the object before the dot.
 
 The `for..in` loop iterates over inherited properties too.
