@@ -39,7 +39,7 @@ can be global – `Symbol.for(descr)`
 `Symbol.for(descr)` gets the symbol from from the global register or creates it
 if it doesn’t exist
 
-`Symbol.keyFor(descr)` gets the name of the symbol by the symbol itself. It
+`Symbol.keyFor(sym)` gets the name (description) of the symbol by the symbol itself. It
 doesn’t work for non-global symbols.
 
 `Symbol.keyFor(x) === x.description`
