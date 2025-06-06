@@ -21,7 +21,7 @@ When a function is passed as a __callback__, the value of `this` depends on how 
 
 In __arrow functions__, `this` retains the value of the enclosing lexical context's `this`. In other words, when evaluating an arrow function's body, the language does not create a new `this` binding.
 
-Arrow functions create a closure over the `this` value of its surrounding scope, which means arrow functions behave as if they are "auto-bound" — no matter how it's invoked, this is bound to what it was when the function was created (in the example above, the global object). The same applies to arrow functions created inside other functions: their this remains that of the enclosing lexical context. See example below.
+Arrow functions create a closure over the `this` value of its surrounding scope, which means arrow functions behave as if they are "auto-bound" — no matter how it's invoked, `this` is bound to what it was when the function was created. The same applies to arrow functions created inside other functions: their this remains that of the enclosing lexical context.
 
 Furthermore, when invoking arrow functions using `call()`, `bind()`, or `apply()`, the `thisArg` parameter is ignored. You can still pass other arguments using these methods, though.
 
