@@ -1,4 +1,4 @@
-## Loops
+# Loops
 
 ```
 while (cond) { … }

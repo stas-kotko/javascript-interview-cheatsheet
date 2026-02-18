@@ -45,7 +45,7 @@ but *before* changes are rendered or new events handled,
 we can schedule it with `queueMicrotask()`
 
 For long heavy calculations that shouldn’t block the event loop,
-we can use [Web Workers](../webworkers.md).
+we can use [Web Workers](../web-workers.md).
 That’s a way to run code in another, parallel thread.
 
 ### Microtasks queue
