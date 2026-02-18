@@ -73,12 +73,12 @@ __`<script defer>`__
 ![script defer](https://www.growingwiththeweb.com/images/2014/02/26/script-defer.svg)
 
 
-|                                            | `async`     | `await` |
+|                                            | `async`     | `defer` |
 |--------------------------------------------|-------------|---------|
 | Non-blocking                               | ✅         | ✅      |
 | Cares about order                          | ❌         | ✅      |
 | Ignored if the `<script>` tag has no `src` | ✅         | ✅      |
-| Script runs                                | When loaded | When the DOM is fully build (but before `DOMContentLoaded` event) |
+| Script runs                                | When loaded | When the DOM is fully built (but before `DOMContentLoaded` event) |
 
 
 In practice, `defer` is used for scripts that need the whole DOM and/or their relative execution order is important.

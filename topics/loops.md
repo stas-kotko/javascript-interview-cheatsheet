@@ -32,7 +32,7 @@ label: for (...) {
 Labels are used for nested loops.
 
 ### Iteration methods difference
-`Object.getOwnPropertynames(obj)` – returns non-symbol keys.  
+`Object.getOwnPropertyNames(obj)` – returns non-symbol keys.  
 `O.getOwnPropertySymbols(o)` – returns symbol keys only.  
 `O.keys/values()` – non-symbol keys/values with enumerable flag.  
 `for .. in` – loops over non-sym keys with enumerable flag, plus prototype’s keys.  

@@ -5,7 +5,7 @@ Objects can be created in two ways: with *literal* or with *constructor*.
 
 `Object.assign(dest, …sources)` – copies all enumerable own props and returns a modified target.
 
-`structuredClone(obj)` clones the object with all nested props making a a true "deep copy" of the target. Can be used with any _structured-clonable type_.
+`structuredClone(obj)` clones the object with all nested props making a true "deep copy" of the target. Can be used with any _structured-clonable type_.
 
 What can __NOT__ be cloned with `structuredClone()`:
 - functions - DataCloneError

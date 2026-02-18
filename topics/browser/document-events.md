@@ -2,13 +2,13 @@
 
 ## Bubbling
 
-Almost all doc events (click, mouseover...) _bubbles_ up from the element on which the event happend (clicked elm === `event.target`) straight up to the `html` element. This event can be captured and handled on its way.
+Almost all doc events (click, mouseover...) _bubbles_ up from the element on which the event happened (clicked elm === `event.target`) straight up to the `html` element. This event can be captured and handled on its way.
 
 - `event.target` - element which produced the event.
 - `event.currentTarget` - element on which _handler_ has fired.
 
 
-To capture the event on its way _down_ we must turn on spetial flag: 
+To capture the event on its way _down_ we must turn on special flag: 
 ```js
 addEventListener(... , { capture: true })
 ```

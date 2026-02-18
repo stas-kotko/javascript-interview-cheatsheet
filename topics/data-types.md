@@ -72,7 +72,7 @@ Methods: add, delete, has, clear, keys, values, entries, forEach
 
 ### WeakMap, WeakSet
 
-These can be used as an additional storage for objectys that already exist.
+These can be used as an additional storage for objects that already exist.
 Objects store there while they are reachable from somewhere else.
 
 `WeakMap` methods: set, get, has, delete

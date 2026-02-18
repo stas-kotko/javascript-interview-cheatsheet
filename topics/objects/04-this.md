@@ -57,7 +57,7 @@ Instead of `func.call(this, ...arguments)` we could use `func.apply(this, args)`
 
 The only syntax difference between `call` and `apply` is that `call` expects *a list of arguments*, while `apply` takes *an array-like object* with them.
 
-> NB! Rremember the difference:
+> NB! Remember the difference:
 > - _**c**_ is for _**c**omma_, used in _**c**all_ 
 > - _**a**_ is for _**a**rray_, used in _**a**pply_
 

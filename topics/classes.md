@@ -3,7 +3,7 @@
 `class` syntax creates a function. Code from `constructor` goes to the func body.
 Methods go to the `F.prototype`.
 
-__Not just a syntactic shugar:__
+__Not just a syntactic sugar:__
 
 1. functions created with `class` labeled by `[[IsClassConstructor]]: true`  
    Hence, we can not use them without `new`
@@ -35,7 +35,7 @@ As a result, inheritance works for both regular and static methods.
 
 Built-in classes have no static inheritance: despite the fact such objects as
 Date or Array inherits from Object, they don't have its statics
-(like `Array.keys` or `Date.getOwnProperty`)
+(like `Array.keys` or `Object.getOwnPropertyNames`)
 
 ---
 
